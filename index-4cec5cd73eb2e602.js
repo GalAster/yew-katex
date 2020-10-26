@@ -1,4 +1,4 @@
-import { renderToString } from './snippets/katex-wasmbind-67dab3ba85a84b12/src/katex.min.js';
+import { renderToString } from './snippets/katex-wasmbind-69aecadf43b8d785/src/katex.min.js';
 
 let wasm;
 
@@ -209,7 +209,7 @@ function addBorrowedObject(obj) {
 }
 function __wbg_adapter_18(arg0, arg1, arg2) {
     try {
-        wasm.wasm_bindgen__convert__closures__invoke1_mut_ref__h07afd2efe7081fdd(arg0, arg1, addBorrowedObject(arg2));
+        wasm.wasm_bindgen__convert__closures__invoke1_mut_ref__hd0232cd305ad8918(arg0, arg1, addBorrowedObject(arg2));
     } finally {
         heap[stack_pointer++] = undefined;
     }
@@ -239,6 +239,168 @@ export class KaTeXOptions {
         this.ptr = 0;
 
         wasm.__wbg_katexoptions_free(ptr);
+    }
+    /**
+    * Whether to render the math in the display mode.
+    * @returns {boolean}
+    */
+    get display_mode() {
+        var ret = wasm.__wbg_get_katexoptions_display_mode(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * Whether to render the math in the display mode.
+    * @param {boolean} arg0
+    */
+    set display_mode(arg0) {
+        wasm.__wbg_set_katexoptions_display_mode(this.ptr, arg0);
+    }
+    /**
+    * If true, display math has `\tags` rendered on the left instead of the right.\
+    * like `\usepackage[leqno]{amsmath}` in LaTeX.
+    * @returns {boolean}
+    */
+    get left_equation_numbers() {
+        var ret = wasm.__wbg_get_katexoptions_left_equation_numbers(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * If true, display math has `\tags` rendered on the left instead of the right.\
+    * like `\usepackage[leqno]{amsmath}` in LaTeX.
+    * @param {boolean} arg0
+    */
+    set left_equation_numbers(arg0) {
+        wasm.__wbg_set_katexoptions_left_equation_numbers(this.ptr, arg0);
+    }
+    /**
+    * If true, display math renders flush left with a `2em` left margin\
+    * like `\documentclass[fleqn]` in LaTeX with the amsmath package.
+    * @returns {boolean}
+    */
+    get flush_left_equations() {
+        var ret = wasm.__wbg_get_katexoptions_flush_left_equations(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * If true, display math renders flush left with a `2em` left margin\
+    * like `\documentclass[fleqn]` in LaTeX with the amsmath package.
+    * @param {boolean} arg0
+    */
+    set flush_left_equations(arg0) {
+        wasm.__wbg_set_katexoptions_flush_left_equations(this.ptr, arg0);
+    }
+    /**
+    * Whether to let KaTeX throw a ParseError for invalid LaTeX.
+    * @returns {boolean}
+    */
+    get throw_on_error() {
+        var ret = wasm.__wbg_get_katexoptions_throw_on_error(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * Whether to let KaTeX throw a ParseError for invalid LaTeX.
+    * @param {boolean} arg0
+    */
+    set throw_on_error(arg0) {
+        wasm.__wbg_set_katexoptions_throw_on_error(this.ptr, arg0);
+    }
+    /**
+    * Color used for invalid LaTeX.
+    * Specifies a minimum thickness, in ems.
+    * @returns {number}
+    */
+    get min_rule_thickness() {
+        var ret = wasm.__wbg_get_katexoptions_min_rule_thickness(this.ptr);
+        return ret;
+    }
+    /**
+    * Color used for invalid LaTeX.
+    * Specifies a minimum thickness, in ems.
+    * @param {number} arg0
+    */
+    set min_rule_thickness(arg0) {
+        wasm.__wbg_set_katexoptions_min_rule_thickness(this.ptr, arg0);
+    }
+    /**
+    * Max size for user-specified sizes.
+    * If set to `None`, users can make elements and spaces arbitrarily large.
+    * @returns {number}
+    */
+    get max_size() {
+        var ret = wasm.__wbg_get_katexoptions_max_size(this.ptr);
+        return ret;
+    }
+    /**
+    * Max size for user-specified sizes.
+    * If set to `None`, users can make elements and spaces arbitrarily large.
+    * @param {number} arg0
+    */
+    set max_size(arg0) {
+        wasm.__wbg_set_katexoptions_max_size(this.ptr, arg0);
+    }
+    /**
+    * Limit the number of macro expansions to the specified number.
+    * If set to `None`, the macro expander will try to fully expand as in LaTeX.
+    * @returns {number}
+    */
+    get max_expand() {
+        var ret = wasm.__wbg_get_katexoptions_max_expand(this.ptr);
+        return ret;
+    }
+    /**
+    * Limit the number of macro expansions to the specified number.
+    * If set to `None`, the macro expander will try to fully expand as in LaTeX.
+    * @param {number} arg0
+    */
+    set max_expand(arg0) {
+        wasm.__wbg_set_katexoptions_max_expand(this.ptr, arg0);
+    }
+    /**
+    * strict mode
+    * @returns {boolean}
+    */
+    get strict() {
+        var ret = wasm.__wbg_get_katexoptions_strict(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * strict mode
+    * @param {boolean} arg0
+    */
+    set strict(arg0) {
+        wasm.__wbg_set_katexoptions_strict(this.ptr, arg0);
+    }
+    /**
+    * Whether to trust users' input.
+    * Cannot be assigned at the same time with [`OptsBuilder::trust_callback`].
+    * @returns {boolean}
+    */
+    get trust() {
+        var ret = wasm.__wbg_get_katexoptions_trust(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * Whether to trust users' input.
+    * Cannot be assigned at the same time with [`OptsBuilder::trust_callback`].
+    * @param {boolean} arg0
+    */
+    set trust(arg0) {
+        wasm.__wbg_set_katexoptions_trust(this.ptr, arg0);
+    }
+    /**
+    * group
+    * @returns {boolean}
+    */
+    get global_group() {
+        var ret = wasm.__wbg_get_katexoptions_global_group(this.ptr);
+        return ret !== 0;
+    }
+    /**
+    * group
+    * @param {boolean} arg0
+    */
+    set global_group(arg0) {
+        wasm.__wbg_set_katexoptions_global_group(this.ptr, arg0);
     }
 }
 
@@ -311,7 +473,7 @@ async function init(input) {
         var ret = JSON.parse(getStringFromWasm0(arg0, arg1));
         return addHeapObject(ret);
     };
-    imports.wbg.__wbg_renderToString_e8d0aa0de669a3e5 = function(arg0, arg1, arg2, arg3) {
+    imports.wbg.__wbg_renderToString_e75076060ed845ca = function(arg0, arg1, arg2, arg3) {
         var ret = renderToString(getStringFromWasm0(arg1, arg2), getObject(arg3));
         var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         var len0 = WASM_VECTOR_LEN;
@@ -321,6 +483,25 @@ async function init(input) {
     imports.wbg.__wbg_setinnerHTML_4ff235db1a3cb4d8 = function(arg0, arg1, arg2) {
         getObject(arg0).innerHTML = getStringFromWasm0(arg1, arg2);
     };
+    imports.wbg.__wbg_firstChild_da572db3c494324b = function(arg0) {
+        var ret = getObject(arg0).firstChild;
+        return isLikeNone(ret) ? 0 : addHeapObject(ret);
+    };
+    imports.wbg.__wbg_getElementById_0cb6ad9511b1efc0 = function(arg0, arg1, arg2) {
+        var ret = getObject(arg0).getElementById(getStringFromWasm0(arg1, arg2));
+        return isLikeNone(ret) ? 0 : addHeapObject(ret);
+    };
+    imports.wbg.__wbg_querySelector_69fd5cd784bcc892 = handleError(function(arg0, arg1, arg2) {
+        var ret = getObject(arg0).querySelector(getStringFromWasm0(arg1, arg2));
+        return isLikeNone(ret) ? 0 : addHeapObject(ret);
+    });
+    imports.wbg.__wbg_setAttribute_727bdb9763037624 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
+        getObject(arg0).setAttribute(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
+    });
+    imports.wbg.__wbg_appendChild_77215fd672b162c5 = handleError(function(arg0, arg1) {
+        var ret = getObject(arg0).appendChild(getObject(arg1));
+        return addHeapObject(ret);
+    });
     imports.wbg.__wbg_new_59cb74e423758ede = function() {
         var ret = new Error();
         return addHeapObject(ret);
@@ -403,10 +584,6 @@ async function init(input) {
         var ret = false;
         return ret;
     };
-    imports.wbg.__wbg_appendChild_77215fd672b162c5 = handleError(function(arg0, arg1) {
-        var ret = getObject(arg0).appendChild(getObject(arg1));
-        return addHeapObject(ret);
-    });
     imports.wbg.__wbg_insertBefore_ea385f1d7ec76e50 = handleError(function(arg0, arg1, arg2) {
         var ret = getObject(arg0).insertBefore(getObject(arg1), getObject(arg2));
         return addHeapObject(ret);
@@ -415,17 +592,6 @@ async function init(input) {
         var ret = getObject(arg0).document;
         return isLikeNone(ret) ? 0 : addHeapObject(ret);
     };
-    imports.wbg.__wbg_namespaceURI_a4d52538ca0c6bae = function(arg0, arg1) {
-        var ret = getObject(arg1).namespaceURI;
-        var ptr0 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-        var len0 = WASM_VECTOR_LEN;
-        getInt32Memory0()[arg0 / 4 + 1] = len0;
-        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-    };
-    imports.wbg.__wbg_createElementNS_ea14cb45a87a0719 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
-        var ret = getObject(arg0).createElementNS(arg1 === 0 ? undefined : getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
-        return addHeapObject(ret);
-    });
     imports.wbg.__wbg_new_3e06d4f36713e4cb = function() {
         var ret = new Object();
         return addHeapObject(ret);
@@ -440,6 +606,17 @@ async function init(input) {
     });
     imports.wbg.__wbg_addEventListener_f0baf69c9c7425c9 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).addEventListener(getStringFromWasm0(arg1, arg2), getObject(arg3), getObject(arg4));
+    });
+    imports.wbg.__wbg_namespaceURI_a4d52538ca0c6bae = function(arg0, arg1) {
+        var ret = getObject(arg1).namespaceURI;
+        var ptr0 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        var len0 = WASM_VECTOR_LEN;
+        getInt32Memory0()[arg0 / 4 + 1] = len0;
+        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+    };
+    imports.wbg.__wbg_createElementNS_ea14cb45a87a0719 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
+        var ret = getObject(arg0).createElementNS(arg1 === 0 ? undefined : getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
+        return addHeapObject(ret);
     });
     imports.wbg.__wbg_removeChild_f4829fcd2e376e1b = handleError(function(arg0, arg1) {
         var ret = getObject(arg0).removeChild(getObject(arg1));
@@ -464,9 +641,6 @@ async function init(input) {
         var ret = Object.is(getObject(arg0), getObject(arg1));
         return ret;
     };
-    imports.wbg.__wbg_setAttribute_727bdb9763037624 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
-        getObject(arg0).setAttribute(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
-    });
     imports.wbg.__wbg_instanceof_HtmlButtonElement_645b6f9d0d172e00 = function(arg0) {
         var ret = getObject(arg0) instanceof HTMLButtonElement;
         return ret;
@@ -499,15 +673,11 @@ async function init(input) {
     imports.wbg.__wbg_setItem_71df4161bb87d575 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).setItem(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
     });
-    imports.wbg.__wbg_querySelector_69fd5cd784bcc892 = handleError(function(arg0, arg1, arg2) {
-        var ret = getObject(arg0).querySelector(getStringFromWasm0(arg1, arg2));
-        return isLikeNone(ret) ? 0 : addHeapObject(ret);
-    });
     imports.wbg.__wbg_lastChild_4a41600911ce94c7 = function(arg0) {
         var ret = getObject(arg0).lastChild;
         return isLikeNone(ret) ? 0 : addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1419 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper1433 = function(arg0, arg1, arg2) {
         var ret = makeMutClosure(arg0, arg1, 46, __wbg_adapter_18);
         return addHeapObject(ret);
     };
